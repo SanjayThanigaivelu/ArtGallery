@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* General Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Ribbon (Main Menu Container) */
+.ribbion {
+  font-size: large;
+  width: 100vw;
+  height: 15vh;
+  background-color: #F5F5F5;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 20px;
+ 
+}
+
+table {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15px;
+
+}
+
+table td {
+  padding: 40px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+
+
+/* Logo */
+.logo {
+  margin-right: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Company Name */
+.comp-name {
+  color: #000;
+  font-size: xx-small;
+  font-weight: bold;
+  margin-top: -4px;
+  margin-left: -5px;
+}
+
+/* Main Menu Links */
+.button-type {
+  text-decoration: none;
+  color: #000;
+  padding: 15px;
+  margin-left: 75px;
+}
+
+.button-type:hover {
+  background-color: #B0E0E6;
+  border: 2px solid #B0E0E6;
+  border-radius: 5px;
+}
+
+
+
+
+/* Hamburger Icon */
+.hamburger {
+  display: none; /* Hidden by default, only shows on small screens */
+}
+
+.hamburger-icon {
+  font-size: 2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Mobile Menu (Initially Hidden) */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color:whitesmoke;
+  padding: 10px;
+  width: 250px;
+  height: 300px;
+  border: 2px solid whitesmoke;
+  position: relative;
+  left: 220px;
+
+}
+
+.mobile-menu.open {
+  display: flex; /* Show when open */
+}
+
+/* Main Content */
+.main {
+  margin: 25px;
+  margin-top: 50px;
+}
+
+/* Image Grid for Artworks */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 30px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+h2 {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px;
+  text-align: left;
+}
+
+/* Footer Styles */
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #232f3e;
+  width: 100%;
+  color: white;
+  padding: 5px 0;
+}
+
+.foot {
+  text-decoration: none;
+  color: white;
+}
+
+.foot a {
+  text-decoration: none;
+  color: white;
+}
+
+.foot-logo-moto {
+  font-size: xx-small;
+  color: white;
+  font-weight: bold;
+  margin-left: -4px;
+}
+
+.Contact {
+padding-bottom: 25px;
+position: relative;
+top: 15px;
+}
+.Followus{
+  padding-bottom: 20px;
+}
+
+/* Footer Hover Effects */
+.Home:hover, .Gallery:hover {
+  color: black;
+  border: 2px solid #94dee7;
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #94dee7;
+}
+
+.icon a {
+  margin-right: 6px;
+}
+
+.icon a:hover {
+  color: #94dee7;
+}
+
+/* -------------------- Media Queries for Responsiveness ---------------------- */
+
+/* Tablet and Small Screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Adjust Image Grid to 3 Columns */
+  .image-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Main Menu Adjustments */
+  .ribbion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  table {
+    display: block;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    bottom: 10px;
+  }
+.comp-name{
+  font-weight: bold;
+  position: relative;
+  bottom: 8px;
+}
+  /* Footer Adjustments */
+  .footer {
+    display: none;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Hide Full Menu and Show Hamburger */
+  .menu-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+    left: 200px;
+  }
+
+  /* Adjust Image Grid to 2 Columns */
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .button-type {
+    width: 60px;
+    padding: 5px;
+  }
+  logo {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    bottom: 10px;
+  }
+.comp-name{
+  font-weight: bold;
+  position: relative;
+  bottom: 8px;
+}
+  
+
+  
+  .footer {
+   display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Single Column Image Grid */
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .button-type {
+    width: 40px;
+    padding: 3px;
+  }
+
+ 
+
+  /* Show the hamburger icon on small screens */
+  .hamburger {
+    display: block;
+    position: relative;
+     left: 130px;
+  }
+
+
+  logo {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    bottom: 10px;
+  }
+.comp-name{
+  font-weight: bold;
+  position: relative;
+  bottom: 8px;
+}
+
+  /* Footer Adjustments */
+  .footer {
+   display: none;
+  }
+
+  .footer table {
+    display: none
+  }
+}

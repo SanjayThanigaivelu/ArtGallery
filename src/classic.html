@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artify</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="ribbion">
+    <table class="container">
+      <tr class="row1">
+        <td>
+          <a href="./index.html">
+            <img class="logo" src="./logo.png" alt="logo"/>
+            <div class="comp-name">Artify Est.2024</div>
+          </a>
+        </td>
+        <!-- Menu Links -->
+        <td class="menu-links">
+          <a href="./index.html" class="button-type">Home</a>
+          <a href="./Mordern-art.html" class="button-type">Modern Art</a>
+          <a href="./classic.html" class="button-type">Classic</a>
+          <a href="./sculptures.html" class="button-type">Sculptures</a>
+          <a href="./cubisum.html" class="button-type">Cubism</a>
+          <a href="./abstract.html" class="button-type">Abstract Art</a>
+        </td>
+        <!-- Hamburger Menu Icon (visible only on mobile screens) -->
+        <td class="hamburger">
+          <div class="hamburger-icon">&#9776;</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Hidden menu (for mobile) -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="./index.html" class="button-type">Home</a>
+    <a href="./Mordern-art.html" class="button-type">Modern Art</a>
+    <a href="./classic.html" class="button-type">Classic</a>
+    <a href="./sculptures.html" class="button-type">Sculptures</a>
+    <a href="./cubisum.html" class="button-type">Cubism</a>
+    <a href="./abstract.html" class="button-type">Abstract Art</a>
+  </div>
+  
+     <div class="main">
+        <a href="./classic.html"><h2>Classic Art</h2></a>
+        <div class="image-grid" id="classic-art-images">
+            
+        </div>
+
+     </div>
+     
+     <div class="footer">
+        <table class="footer-bootom">
+       
+        <tr>
+          <td><img class="foot logo" src="./logo.png" alt="logo"/><div class="foot-logo-moto">Artify Est.2024</div></a></td>
+          <td><a class="foot Home" href="./index.html">Home</a></td>
+          <td><a class="foot Gallery" href="#Mordern-art">Gallery</a></td>
+          <td class="foot Contact">Contact<div><i class="fa fa-envelope"></i> <a href="mailto:sanjaymuthulakshmi@gmail.com?subject=Art%20Gallery%20Inquiry">
+          sanjaymuthulakshmi@gmail.com</a> <br/><i class="fa fa-phone"></i> 9488941260</div></td>
+    <td class="foot Followus">Follow Us<div class="icon"><a href="https://www.instagram.com/sanjay_thanigaivelu/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/sanjay-thanigaive07/"><i class="fab fa-linkedin-in"></i></a></div></td>
+       <td class="foot Copyright">&#169;2024 Artify. All rights are reserved</td>
+  </tr>
+        </table>
+      </div>
+
+      <script type="module" src="js/index.js"></script>
+      <script>
+        // Hamburger toggle script
+        document.querySelector('.hamburger-icon').addEventListener('click', function() {
+          const mobileMenu = document.getElementById('mobileMenu');
+          mobileMenu.classList.toggle('open');
+        });
+      </script>
+</body>
+</html>
